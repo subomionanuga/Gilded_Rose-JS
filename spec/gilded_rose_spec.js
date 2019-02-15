@@ -17,7 +17,15 @@ describe("Normal Items", function() {
     items = gildedRose.updateQuality();
   });
 
+  it("Checks that the name of the item is stored", function() {
+    expect(items[0].name).toEqual("My goodies")
+  })
+
   it("Sell by date reduces by 1 each day", function() {
     expect(items[0].sellIn).toEqual(9)
+  })
+
+  it("Quality reduces by 1 each day", function() {
+    expect(items[0].quality).toEqual(49)
   })
 })
